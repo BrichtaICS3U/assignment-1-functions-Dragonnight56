@@ -8,9 +8,17 @@ def CtoF (C):
         F = (1.8)*C+32
         return round(F)
 
-###### uncomment this when you are ready to work on it
-#def FtoC ():
-#
+def FtoC (F):
+        '''Converts temperature in Fahrenheit to Celsius'''
+        C = (0.55556)*(F-32)
+        return round(C)
 
-temperature = float(input('Enter your temperature in Celsius: '))
-print(CtoF(temperature), "Fahrenheit")
+
+Question = input("What conversion do you want (C = In celsius, F = In Fahrenheit)? " )
+
+if Question == "F" :
+        temperature = float(input('Enter your temperature in Celsius: '))
+        print(CtoF(temperature), "Fahrenheit")
+elif Question == "C" :
+        temperature = float(input('Enter your temperature in Fahrenheit: '))
+        print(FtoC(temperature), "Celsius") 
